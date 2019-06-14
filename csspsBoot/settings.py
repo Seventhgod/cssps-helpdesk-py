@@ -23,11 +23,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '2d2s#b4fu^zvb5o(tlzte%-w=#py=!w+#$r-e(ryoa_d09)%&v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    '127.0.0.1',
-    '155.138.228.77',
+    #'127.0.0.1',
+    #'155.138.228.77',
+    '*',
 ]
 
 
@@ -110,10 +111,17 @@ LOGIN_REDIRECT_URL = '/login/'
 
 
 DATABASES = {
+    #'default': {
+     #   'ENGINE': 'django.db.backends.sqlite3',
+      #  'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #}
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'django_db',
+        'USER': 'cssps',
+        'PASSWORD': 'cssps@2019',
+        'HOST': 'localhost',
+        'PORT': '',  
 }
 LOGIN_URL = 'helpdesk/login/'
 
