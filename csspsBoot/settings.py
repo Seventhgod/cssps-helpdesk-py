@@ -122,6 +122,7 @@ DATABASES = {
         'PASSWORD': 'cssps@2019',
         'HOST': 'localhost',
         'PORT': '',  
+    }
 }
 LOGIN_URL = 'helpdesk/login/'
 
